@@ -36,6 +36,10 @@ body {
     font-style: normal;
 }
 
+svg {
+    fill: currentColor;
+}
+
 /*===head===*/
 
 .container {
@@ -148,26 +152,12 @@ body {
     width: 16px;
     height: 12px;
     margin-right: 10px;
-
-    fill: var(--primary-text-color);
 }
 
 .phone {
     width: 10px;
     height: 16px;
     margin-right: 10px;
-
-    fill: var(--primary-text-color);
-}
-
-.contact:hover .mail,
-.contact:focus .mail {
-    fill: var(--accent-color);
-}
-
-.contact:hover .phone,
-.contact:focus .phone {
-    fill: var(--accent-color);
 }
 
 /*===hero===*/
@@ -375,23 +365,19 @@ body {
     justify-content: center;
     width: 44px;
     height: 44px;
+
+    color: var(--color-social-icons);
 }
 
 .social-link:hover,
 .social-link:focus {
     border-radius: 50%;
+    color: var(--main-title-color);
     background-color: var(--accent-color);
 }
 
 .social-icon {
     height: 20px;
-
-    fill: var(--color-social-icons);
-}
-
-.social-link:hover .social-icon,
-.social-link:focus .social-icon {
-    fill: var(--main-title-color);
 }
 
 /*===constant clients===*/
@@ -429,20 +415,13 @@ body {
 
     border: 1px solid var(--color-social-icons);
     border-radius: 4px;
+    color: var(--color-social-icons);
 }
 
 .clients-link:hover,
 .clients-link:focus {
     border: 1px solid var(--accent-color);
-}
-
-.clients-icon {
-    fill: var(--color-social-icons);
-}
-
-.clients-link:hover .clients-icon,
-.clients-link:focus .clients-icon {
-    fill: var(--accent-color);
+    color: var(--accent-color);
 }
 
 /*===basement===*/
@@ -535,6 +514,7 @@ body {
     border-radius: 50%;
 
     background-color: var(--color-basement-icons);
+    color: var(--main-title-color);
 }
 
 .basement-link:hover,
@@ -548,8 +528,6 @@ body {
 
 .basement-icon {
     height: 20px;
-
-    fill: var(--main-title-color);
 }
 
 /*===portfolio===*/
@@ -600,9 +578,8 @@ body {
 }
 
 .portfolio-item {
-    width: 370px;
+    position: relative;
     margin-right: 30px;
-    border: 1px solid var(--portfolio-border-color);
 }
 
 .portfolio-item:nth-child(3n) {
@@ -614,13 +591,24 @@ body {
 }
 
 .unit {
+    width: 370px;
+    min-height: 404px;
     text-decoration: none;
-    display: block;
+    display: flex;
+    align-items: flex-end;
+
+    border: 1px solid var(--portfolio-border-color);
 }
 
 .unit:hover,
 .unit:focus {
     box-shadow: var(--portfolio-list-shadow);
+}
+
+.portfolio-picture {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .portfolio-title {
