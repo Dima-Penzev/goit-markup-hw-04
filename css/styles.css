@@ -36,10 +36,6 @@ body {
     font-style: normal;
 }
 
-svg {
-    fill: currentColor;
-}
-
 /*===head===*/
 
 .container {
@@ -578,7 +574,7 @@ svg {
 }
 
 .portfolio-item {
-    position: relative;
+    width: 370px;
     margin-right: 30px;
 }
 
@@ -590,14 +586,9 @@ svg {
     margin-top: 30px;
 }
 
-.unit {
-    width: 370px;
-    min-height: 404px;
+.unit {    
     text-decoration: none;
-    display: flex;
-    align-items: flex-end;
-
-    border: 1px solid var(--portfolio-border-color);
+    display: block;
 }
 
 .unit:hover,
@@ -606,10 +597,15 @@ svg {
 }
 
 .portfolio-picture {
-    position: absolute;
-    top: 0;
-    left: 0;
+    display: block;
+} 
+
+.portfolio-discription {
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: var(--portfolio-border-color);
 }
+
 
 .portfolio-title {
     margin: 0;
